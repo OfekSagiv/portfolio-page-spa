@@ -5,7 +5,7 @@ import "../css/Navbar.css";
 
 const Navbar = ({ onSelect, selected }) => {
     const tabs = ["about", "technologies", "projects", "contact"];
-    const navLinksRef = useRef(null); // חדש
+    const navLinksRef = useRef(null);
 
     const handleSelect = (tab) => {
         onSelect(tab);
