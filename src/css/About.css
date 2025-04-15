@@ -1,0 +1,68 @@
+.about-section {
+    padding: 5rem 2rem;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-greeting {
+    font-size: 1.25rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.about-name {
+    font-weight: bold;
+    color: #111827;
+    margin: 0.5rem 0;
+    padding-bottom: 20px;
+
+}
+
+.about-title {
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+.about-description {
+    max-width: 500px;
+    color: #4b5563;
+    line-height: 1.6;
+
+}
+
+.about-avatar {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-avatar .MuiAvatar-root {
+    width: 350px !important;
+    height: 350px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-left: 50px;
+}
+
+.about-text .download-cv-button {
+    margin-top: 50px !important;
+    background-color: cornflowerblue !important;
+
+}
