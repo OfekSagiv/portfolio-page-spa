@@ -3,12 +3,12 @@ import {Card, CardContent, Container} from "@mui/material";
 
 import "./App.css";
 
-import About from "./components/About.jsx";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
-import Technologies from "./components/Technologies.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
+import About from "./components/about/About.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import Technologies from "./components/Technologies/Technologies.jsx";
+import Projects from "./components/projects/Projects.jsx";
+import Contact from "./components/contact/Contact.jsx";
 
 
 
