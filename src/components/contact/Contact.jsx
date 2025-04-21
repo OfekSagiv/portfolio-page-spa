@@ -4,7 +4,7 @@ import {
     Section,
     CardContainer,
 
-} from "../layout/SectionLayout.js";
+} from "../common/SectionLayout.js";
 
 const Contact = () => {
     return (

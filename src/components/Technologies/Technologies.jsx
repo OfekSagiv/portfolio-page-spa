@@ -4,7 +4,7 @@ import {
     Section,
     CardContainer,
     CardHeading
-} from "../layout/SectionLayout";
+} from "../common/SectionLayout.js";
 import {
     SkillsContainer,
 

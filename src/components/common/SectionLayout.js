@@ -17,8 +17,6 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     flexWrap: "wrap",
 }));
 
-
-
 export const CardHeading = styled(Typography)(({ theme }) => ({
     fontSize: "2rem",
     fontWeight: 600,

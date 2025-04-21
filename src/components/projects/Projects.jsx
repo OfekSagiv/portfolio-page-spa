@@ -2,7 +2,7 @@ import React from "react";
 import {
     Section,
     CardContainer,
-} from "../layout/SectionLayout.js";
+} from "../common/SectionLayout.js";
 
 
 const Projects = () => {
