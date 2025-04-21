@@ -1,6 +1,5 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 
 export const SkillsContainer = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -9,8 +8,6 @@ export const SkillsContainer = styled(Box)(({ theme }) => ({
     gap: theme.spacing(4),
     width: "100%",
 }));
-
-
 
 export const SkillsGrid = styled(Box)(({ theme }) => ({
     display: "flex",

@@ -15,11 +15,6 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
 export const CardTitle = styled(Typography)(({ theme }) => ({
     fontSize: "1.25rem",
     fontWeight: 600,
-    color: theme.palette.grey[900],
-    marginBottom: theme.spacing(2),
-}));
-
-export const SkillItem = styled(Box)(({ theme }) => ({
     marginBottom: theme.spacing(2),
 }));
 
@@ -30,10 +25,6 @@ export const SkillLabel = styled(Box)(({ theme }) => ({
     marginBottom: theme.spacing(0.5),
 }));
 
-export const SkillName = styled(Typography)(({ theme }) => ({
-    fontSize: "0.95rem",
-    color: theme.palette.grey[800],
-}));
 
 export const SkillProgress = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.grey[300],
@@ -46,8 +37,4 @@ export const ProgressBar = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.grey[900],
     height: "100%",
     transition: "width 0.3s ease-in-out",
-}));
-
-export const CheckIcon = styled(CheckCircle)(({ theme }) => ({
-    color: theme.palette.grey[900],
 }));
