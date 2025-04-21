@@ -1,26 +1,33 @@
 import React from "react";
+import SkillCard from "../SkillCard/SkillCard";
 import {
     Section,
     CardContainer,
-    TextColumn,
-    SideColumn,
-} from "../layout/SectionLayout.js";
+    CardHeading
+} from "../layout/SectionLayout";
+import {
+    SkillsContainer,
 
+    SkillsGrid,
+} from "./Technologies.styles";
 
-const Technologies = () => {
+import { frontend, backend, tools } from "../../constants/skillsData";
+
+function Technologies() {
     return (
-        <Section id="technologies">
+        <Section id="skills">
             <CardContainer>
-                <TextColumn>
-                    {/* some text*/}
-                </TextColumn>
-
-                <SideColumn>
-                    {/* some text*/}
-                </SideColumn>
+                <SkillsContainer>
+                    <CardHeading>Explore my skills</CardHeading>
+                    <SkillsGrid>
+                        <SkillCard title="Frontend Development" skills={frontend} />
+                        <SkillCard title="Backend Development" skills={backend} />
+                        <SkillCard title="Technologies & Tools" skills={tools} />
+                    </SkillsGrid>
+                </SkillsContainer>
             </CardContainer>
         </Section>
     );
-};
+}
 
 export default Technologies;

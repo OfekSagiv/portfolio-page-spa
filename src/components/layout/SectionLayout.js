@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 export const Section = styled("section")(({ theme }) => ({
     padding: theme.spacing(10, 2),
@@ -16,15 +17,10 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     flexWrap: "wrap",
 }));
 
-export const TextColumn = styled(Box)(({ theme }) => ({
-    flex: 1,
-    minWidth: "300px",
-    textAlign: "left",
-}));
 
-export const SideColumn = styled(Box)(({ theme }) => ({
-    flex: "0 0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+
+export const CardHeading = styled(Typography)(({ theme }) => ({
+    fontSize: "2rem",
+    fontWeight: 600,
+    color: theme.palette.grey[900],
 }));
