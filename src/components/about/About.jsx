@@ -24,18 +24,12 @@ const About = () => {
                     <Typography variant="h4" sx={{pb: 2.5}}>
                         {aboutText.name}
                     </Typography>
-                    <Typography
-                        variant="body1"
-                        sx={{maxWidth: 500, lineHeight: 1.6}}
-                    >
+                    <Typography variant="body1" sx={{maxWidth: 500, lineHeight: 1.6}}>
                         {aboutText.description}
                     </Typography>
 
                     <CVButtonWrapper>
-                        <PrimaryButton
-                            href="/cv.pdf" download
-                            endIcon={<DownloadIcon/>}
-                        >
+                        <PrimaryButton href="/cv.pdf" download endIcon={<DownloadIcon/>}>
                             Download my CV
                         </PrimaryButton>
                     </CVButtonWrapper>

@@ -14,8 +14,11 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     maxWidth: "1200px",
     margin: "0 auto",
     gap: theme.spacing(4),
+    padding: theme.spacing(0, 8),
     flexWrap: "wrap",
 }));
+
+
 
 export const CardHeading = styled(Typography)(({ theme }) => ({
     fontSize: "2rem",

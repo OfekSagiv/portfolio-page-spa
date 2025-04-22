@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Technologies from "./components/Technologies/Technologies.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import Box from "@mui/material/Box";
 
 
 
@@ -35,21 +36,37 @@ function App() {
     }, [section]);
 
     return (
-        <div className="app-root">
-            <Navbar onSelect={setSection} selected={section}/>
-            <main>
-                <section>
+        <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
+                backgroundColor: "background.default",
+                fontFamily: "Roboto, sans-serif",
+            }}
+        >
+            <Navbar onSelect={setSection} selected={section} />
+
+            <Box component="main" sx={{ flex: 1, pt: "80px" }}>
+                <Box
+                    component="section"
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        px: 2.5,
+                        py: 7.5,
+                    }}
+                >
                     <Container maxWidth="lg">
-                        <Card className="main-card">
-                            <CardContent>
-                                {renderSection()}
-                            </CardContent>
+                        <Card elevation={1}>
+                            <CardContent>{renderSection()}</CardContent>
                         </Card>
                     </Container>
-                </section>
-            </main>
-            <Footer/>
-        </div>
+                </Box>
+            </Box>
+
+            <Footer />
+        </Box>
     );
 }
 
