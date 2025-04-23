@@ -8,9 +8,17 @@ export const StyledAvatar = styled(Avatar)(({ theme }) => ({
     borderRadius: "50%",
     objectFit: "cover",
     boxShadow: "0 5px 20px rgba(0, 0, 0, 0.05)",
-    marginLeft: 50,
+    [theme.breakpoints.down("md")]: {
+        width: 250,
+        height: 250,
+        alignSelf: "center",
+        order: -1,
+        marginBottom: theme.spacing(4),
+    },
 }));
 
 export const CVButtonWrapper = styled(Box)(({ theme }) => ({
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(4),
+    display: "flex",
+    justifyContent: "center",
 }));

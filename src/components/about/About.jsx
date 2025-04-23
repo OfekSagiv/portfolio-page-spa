@@ -4,7 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import aboutText from "../../constants/aboutText";
 import {
     Section,
-    CardContainer,
+    CardContainer, SideColumn,
 } from "../common/SectionLayout.js";
 import {
     StyledAvatar,
@@ -34,8 +34,9 @@ const About = () => {
                         </PrimaryButton>
                     </CVButtonWrapper>
                 </Box>
-
-                <StyledAvatar src="/photo.png" alt="Ofek Sagiv"/>
+                <SideColumn>
+                    <StyledAvatar src="/photo.png" alt="Ofek Sagiv"/>
+                </SideColumn>
             </CardContainer>
         </Section>
     );

@@ -15,7 +15,7 @@ import { frontend, backend, tools } from "../../constants/skillsData";
 
 function Technologies() {
     return (
-        <Section id="skills">
+        <Section id="skills" >
             <CardContainer>
                 <SkillsContainer>
                     <CardHeading>Explore my skills</CardHeading>

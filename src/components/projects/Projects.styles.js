@@ -1,24 +1,22 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 
-export const TextColumn = styled(Box)(({ theme }) => ({
-    flex: 1,
-    minWidth: "300px",
-}));
-
-export const ImageColumn = styled(Box)(({ theme }) => ({
-    flex: "0 0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    minWidth: "300px",
-}));
-
-export const ProjectImage = styled("img")(({ theme }) => ({
-    width: "100%",
-    aspectRatio: "1 / 1",
-    objectFit: "cover",
+export const ProjectImageBox = styled(Box)(({ theme }) => ({
+    width: 350,
+    height: 350,
     borderRadius: theme.shape.borderRadius * 2,
-    boxShadow: theme.shadows[2],
-    maxWidth: "300px",
+    overflow: "hidden",
+    boxShadow: "0 5px 20px rgba(0, 0, 0, 0.05)",
+    [theme.breakpoints.down("md")]: {
+        width: 250,
+        height: 250,
+        alignSelf: "center",
+        order: -1,
+    },
 }));
+
+export const StyledProjectImage = styled("img")({
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+});

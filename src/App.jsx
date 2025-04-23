@@ -55,10 +55,11 @@ function App() {
                         justifyContent: "center",
                         px: 2.5,
                         py: 7.5,
+
                     }}
                 >
                     <Container maxWidth="lg">
-                        <Card elevation={1}>
+                        <Card elevation={1} >
                             <CardContent>{renderSection()}</CardContent>
                         </Card>
                     </Container>
