@@ -15,8 +15,29 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import {Section, CardContainer, CardHeading, SideColumn} from "../common/SectionLayout";
 import PrimaryButton from "../common/PrimaryButton";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const Contact = () => {
+    const form = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service",     // Service ID
+            "template",    // Template ID
+            form.current,
+            "public key"   // Public Key
+        )
+            .then(() => {
+                alert("Message sent successfully!");
+            })
+            .catch((error) => {
+                console.error("Failed to send:", error);
+                alert("Something went wrong. Please try again.");
+            });
+    };
     return (
         <Section id="contact">
             <CardContainer sx={{ alignItems: "flex-start" }}>
@@ -29,11 +50,11 @@ const Contact = () => {
                     }}
                 >
                     <CardHeading gutterBottom>Contact Me</CardHeading>
-
+                    <form ref={form} onSubmit={handleSubmit}>
                     <Stack spacing={2}>
-                        <TextField label="Name" fullWidth required />
-                        <TextField label="Email" type="email" fullWidth required />
-                        <TextField label="Message" multiline rows={4} fullWidth required />
+                        <TextField label="Name" name="name" fullWidth required />
+                        <TextField label="Email" name="email" type="email" fullWidth required />
+                        <TextField label="Message" name="message" multiline rows={4} fullWidth required />
                         <Box
                             sx={{
                                 mt: 2,
@@ -41,11 +62,12 @@ const Contact = () => {
                                 justifyContent: { xs: "center", md: "flex-start" },
                             }}
                         >
-                            <PrimaryButton sx={{ width: "100%" }}>
+                            <PrimaryButton type="submit" sx={{ width: "100%" }}>
                                 Send Message
                             </PrimaryButton>
                         </Box>
                     </Stack>
+                    </form>
                 </Box>
 
                 <Divider
