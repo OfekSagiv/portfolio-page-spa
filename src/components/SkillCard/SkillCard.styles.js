@@ -1,7 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { CheckCircle } from "@mui/icons-material";
 
 export const CardWrapper = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.grey[100],

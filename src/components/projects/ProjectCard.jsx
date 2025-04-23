@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Stack } from "@mui/material";
 import { CardHeading } from "../common/SectionLayout";
 import PrimaryButton from "../common/PrimaryButton";
-import { CVButtonWrapper } from "../about/About.styles";
+
 
 const ProjectCard = ({
                          title,
