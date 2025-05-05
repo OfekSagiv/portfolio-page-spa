@@ -18,7 +18,7 @@ const About = () => {
         <Section id="about">
             <CardContainer>
                 <Box>
-                    <Typography variant="h6">
+                    <Typography variant="h6" >
                         {aboutText.greeting}
                     </Typography>
                     <Typography variant="h4" sx={{pb: 2.5}}>

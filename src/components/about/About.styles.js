@@ -18,7 +18,7 @@ export const StyledAvatar = styled(Avatar)(({ theme }) => ({
 }));
 
 export const CVButtonWrapper = styled(Box)(({ theme }) => ({
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(4) ,
     display: "flex",
     justifyContent: "center",
 }));
