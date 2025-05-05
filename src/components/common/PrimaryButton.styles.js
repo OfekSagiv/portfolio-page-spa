@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
 export const StyledButton = styled(Button)(({ theme }) => ({
-    paddingLeft: theme.spacing(4),
+    paddingLeft: theme.spacing(4) ,
     paddingRight: theme.spacing(4),
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5),

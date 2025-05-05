@@ -13,7 +13,7 @@ const Navbar = ({ onSelect, selected }) => {
     const { navLinksRef, handleSelect } = useNavbarLogic(onSelect);
 
     return (
-        <NavbarContainer position="fixed" color="default" elevation={1}>
+        <NavbarContainer position="fixed" color="default" elevation={1} >
             <CustomToolbar>
                 <NavLinksWrapper ref={navLinksRef}>
                     {NAV_TABS.map((tab) => (

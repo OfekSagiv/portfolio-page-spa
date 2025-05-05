@@ -26,7 +26,7 @@ function Technologies() {
                     </SkillsGrid>
                 </SkillsContainer>
             </CardContainer>
-        </Section>
+        </Section >
     );
 }
 

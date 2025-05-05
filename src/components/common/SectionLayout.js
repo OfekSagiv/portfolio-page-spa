@@ -8,7 +8,7 @@ export const Section = styled("section")(({ theme }) => ({
 }));
 
 export const CardContainer = styled(Box)(({ theme }) => ({
-    display: "flex",
+    display: "flex" ,
     alignItems: "center",
     justifyContent: "space-between",
     maxWidth: "1200px",

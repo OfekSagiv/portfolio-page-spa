@@ -14,7 +14,7 @@ import Box from "@mui/material/Box";
 
 
 function App() {
-    const [section, setSection] = useState("about");
+    const [section, setSection] = useState("about") ;
 
     const renderSection = () => {
         switch (section) {

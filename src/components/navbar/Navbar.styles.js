@@ -16,7 +16,7 @@ export const CustomToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export const NavLinksWrapper = styled(Box)(({ theme }) => ({
-    display: "flex",
+    display: "flex" ,
     gap: theme.spacing(4),
     overflowX: "auto",
     scrollbarWidth: "none",

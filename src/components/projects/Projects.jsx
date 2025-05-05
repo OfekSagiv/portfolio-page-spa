@@ -28,7 +28,7 @@ const Projects = () => {
                     codeLink={project.codeLink}
                     codeIcon={ICONS[project.codeIcon]}
                 />
-                <SideColumn>
+                <SideColumn >
                     <ProjectImageBox>
                         <StyledProjectImage src={project.image} alt="Project thumbnail" />
                     </ProjectImageBox>

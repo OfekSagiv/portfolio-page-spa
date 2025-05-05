@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 
 export const FooterContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "#f5f5f5",
-    color: "#000",
+    color: "#000" ,
     textAlign: "center",
     padding: "20px 0",
     fontSize: "14px",

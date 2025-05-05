@@ -1,6 +1,6 @@
 export const frontend = [
     { name: "HTML/CSS", value: 90 },
-    { name: "JavaScript", value: 80 },
+    { name: "JavaScript", value: 80 } ,
     { name: "React", value: 85 },
 ];
 
