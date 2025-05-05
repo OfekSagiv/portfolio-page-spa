@@ -11,7 +11,7 @@ export const ProjectImageBox = styled(Box)(({ theme }) => ({
         width: 250,
         height: 250,
         alignSelf: "center",
-        order: -1,
+        order: -1 ,
     },
 }));
 

@@ -16,7 +16,7 @@ const ProjectCard = ({
                      }) => {
     return (
         <div>
-            <CardHeading gutterBottom>{title}</CardHeading>
+            <CardHeading gutterBottom>{title}</CardHeading >
             <Typography variant="body1" sx={{ maxWidth: 500, lineHeight: 1.6, mb: 3 }}>
                 {description}
             </Typography>

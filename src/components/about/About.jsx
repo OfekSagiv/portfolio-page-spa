@@ -17,7 +17,7 @@ const About = () => {
     return (
         <Section id="about">
             <CardContainer>
-                <Box>
+                <Box >
                     <Typography variant="h6">
                         {aboutText.greeting}
                     </Typography>

@@ -24,7 +24,7 @@ export default function SkillCard({ title, skills }) {
                     <SkillProgress>
                         <ProgressBar style={{ width: `${skill.value}%` }} />
                     </SkillProgress>
-                </Box>
+                </Box >
             ))}
         </CardWrapper>
     );

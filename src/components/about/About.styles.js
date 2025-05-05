@@ -3,7 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 
 export const StyledAvatar = styled(Avatar)(({ theme }) => ({
-    width: 350,
+    width: 350 ,
     height: 350,
     borderRadius: "50%",
     objectFit: "cover",

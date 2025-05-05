@@ -18,7 +18,7 @@ export const CardTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const SkillLabel = styled(Box)(({ theme }) => ({
-    display: "flex",
+    display: "flex" ,
     alignItems: "center",
     gap: theme.spacing(1),
     marginBottom: theme.spacing(0.5),

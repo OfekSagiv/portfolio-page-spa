@@ -4,7 +4,7 @@ import { COPYRIGHT_TEXT } from "../../constants/siteMeta";
 
 const Footer = () => {
     return (
-        <FooterContainer component="footer">
+        <FooterContainer component="footer" >
             <FooterText variant="body2">
                 {COPYRIGHT_TEXT}
             </FooterText>

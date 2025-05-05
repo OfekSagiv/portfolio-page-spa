@@ -9,7 +9,7 @@ const useNavbarLogic = (onSelect) => {
         scroller.scrollTo(tab, {
             duration: 500,
             smooth: true,
-            offset: -70,
+            offset: -70 ,
         });
     };
 
