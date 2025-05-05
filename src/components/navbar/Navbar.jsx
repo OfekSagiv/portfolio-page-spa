@@ -7,8 +7,7 @@ import {
 } from "./Navbar.styles";
 
 import useNavbarLogic from "../../hooks/useNavbarLogic";
-
-const tabs = ["about", "technologies", "projects", "contact"];
+import { NAV_TABS } from "../../constants/navigation";
 
 const Navbar = ({ onSelect, selected }) => {
     const { navLinksRef, handleSelect } = useNavbarLogic(onSelect);
@@ -17,7 +16,7 @@ const Navbar = ({ onSelect, selected }) => {
         <NavbarContainer position="fixed" color="default" elevation={1}>
             <CustomToolbar>
                 <NavLinksWrapper ref={navLinksRef}>
-                    {tabs.map((tab) => (
+                    {NAV_TABS.map((tab) => (
                         <StyledButton
                             key={tab}
                             onClick={() => handleSelect(tab)}

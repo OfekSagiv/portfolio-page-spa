@@ -1,12 +1,12 @@
 import React from "react";
 import { FooterContainer, FooterText } from "./Footer.styles";
-import aboutText from "../../constants/aboutText.js";
+import { COPYRIGHT_TEXT } from "../../constants/siteMeta";
 
 const Footer = () => {
     return (
         <FooterContainer component="footer">
             <FooterText variant="body2">
-                &copy; 2025 {aboutText.name}. All rights reserved.
+                {COPYRIGHT_TEXT}
             </FooterText>
         </FooterContainer>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Stack } from "@mui/material";
 import { CardHeading } from "../common/SectionLayout";
 import PrimaryButton from "../common/PrimaryButton";
-
+import { PROJECT_BUTTON_LABELS } from "../../constants/projectLabels";
 
 const ProjectCard = ({
                          title,
@@ -36,9 +36,8 @@ const ProjectCard = ({
                     href={demoLink}
                     target="_blank"
                     endIcon={demoIcon}
-
                 >
-                    Swagger UI
+                    {PROJECT_BUTTON_LABELS.demo}
                 </PrimaryButton>
             </Stack>
 
@@ -56,9 +55,8 @@ const ProjectCard = ({
                     href={codeLink}
                     target="_blank"
                     endIcon={codeIcon}
-
                 >
-                    GitHub
+                    {PROJECT_BUTTON_LABELS.code}
                 </PrimaryButton>
             </Stack>
         </div>
