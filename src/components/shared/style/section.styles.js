@@ -2,10 +2,15 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-export const Section = styled("section")(({ theme }) => ({
-    padding: theme.spacing(2, 1),
-    backgroundColor: "#fff",
+
+export const Section = styled("section")(() => ({
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "80px",
 }));
+
 
 export const CardContainer = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -14,8 +19,18 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     maxWidth: "1200px",
     margin: "0 auto",
     gap: theme.spacing(4),
-    padding: theme.spacing(0, 8),
+    padding: theme.spacing(8, 8),
     flexDirection: "row",
+    backgroundColor: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    border: theme.palette.mode === "light"
+        ? "1.5px solid #c0c0c0"
+        : "1.5px solid #333",
+    boxShadow: theme.palette.mode === "light"
+        ? "0 4px 16px rgba(0,0,0,0.12)"
+        : "0 4px 16px rgba(0,0,0,0.5)",
+    borderRadius: 12,
+    overflow: "hidden",
     [theme.breakpoints.down("md")]: {
         flexDirection: "column",
         alignItems: "stretch",
@@ -27,19 +42,8 @@ export const CardContainer = styled(Box)(({ theme }) => ({
 export const CardHeading = styled(Typography)(({ theme }) => ({
     fontSize: "2rem",
     fontWeight: 600,
-    color: theme.palette.grey[900],
+    color: theme.palette.text.primary,
     [theme.breakpoints.down("sm")]: {
         fontSize: "1.7rem",
-    },
-}));
-
-export const SideColumn = styled(Box)(({ theme }) => ({
-    flex: "0 0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [theme.breakpoints.down("md")]: {
-        order: -1,
-        width: "100%",
     },
 }));

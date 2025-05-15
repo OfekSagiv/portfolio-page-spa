@@ -8,13 +8,18 @@ import {
 
 import useNavbarLogic from "../../hooks/useNavbarLogic";
 import { NAV_TABS } from "../../constants/navigation";
+import { IconButton, Tooltip } from "@mui/material";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
 
-const Navbar = ({ onSelect, selected }) => {
+const Navbar = ({ onSelect, selected, mode, toggleTheme }) => {
     const { navLinksRef, handleSelect } = useNavbarLogic(onSelect);
 
     return (
+
         <NavbarContainer position="fixed" color="default" elevation={1}>
+
             <CustomToolbar>
+
                 <NavLinksWrapper ref={navLinksRef}>
                     {NAV_TABS.map((tab) => (
                         <StyledButton
@@ -26,8 +31,15 @@ const Navbar = ({ onSelect, selected }) => {
                             {tab.charAt(0).toUpperCase() + tab.slice(1)}
                         </StyledButton>
                     ))}
+                    <Tooltip title="Toggle theme">
+                        <IconButton onClick={toggleTheme} color="inherit">
+                            {mode === "dark" ? <Brightness7 /> : <Brightness4 />}
+                        </IconButton>
+                    </Tooltip>
                 </NavLinksWrapper>
+
             </CustomToolbar>
+
         </NavbarContainer>
     );
 };

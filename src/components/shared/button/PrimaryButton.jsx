@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "./PrimaryButton.styles";
+import { StyledButton } from "./PrimaryButton.styles.js";
 
 export default function PrimaryButton({ children, ...props }) {
     return (

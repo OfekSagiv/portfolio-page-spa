@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Card, CardContent, Container} from "@mui/material";
+import { Box} from "@mui/material";
 
 import "./App.css";
 
@@ -9,25 +9,23 @@ import Footer from "./components/footer/Footer.jsx";
 import Technologies from "./components/Technologies/Technologies.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contact from "./components/contact/Contact.jsx";
-import Box from "@mui/material/Box";
+import {CardContainer, Section} from "./components/shared/style/section.styles.js";
 
-
-
-function App() {
+function App({mode, toggleTheme}) {
     const [section, setSection] = useState("about");
 
     const renderSection = () => {
         switch (section) {
             case "about":
-                return <About />;
+                return <About/>;
             case "technologies":
-                return <Technologies />;
+                return <Technologies/>;
             case "projects":
-                return <Projects />;
+                return <Projects/>;
             case "contact":
-                return <Contact />;
+                return <Contact/>;
             default:
-                return <About />;
+                return <About/>;
         }
     };
 
@@ -36,37 +34,14 @@ function App() {
     }, [section]);
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "100vh",
-                backgroundColor: "background.default",
-                fontFamily: "Roboto, sans-serif",
-            }}
-        >
-            <Navbar onSelect={setSection} selected={section} />
-
-            <Box component="main" sx={{ flex: 1, pt: "80px" }}>
-                <Box
-                    component="section"
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        px: 2.5,
-                        py: 7.5,
-
-                    }}
-                >
-                    <Container maxWidth="lg">
-                        <Card elevation={1} >
-                            <CardContent>{renderSection()}</CardContent>
-                        </Card>
-                    </Container>
-                </Box>
-            </Box>
-
-            <Footer />
+        <Box sx={{display: "flex", flexDirection: "column", minHeight: "100vh",}}>
+            <Navbar onSelect={setSection} selected={section} mode={mode} toggleTheme={toggleTheme}/>
+            <Section component="main" >
+                <CardContainer>
+                        {renderSection()}
+                </CardContainer>
+            </Section>
+            <Footer/>
         </Box>
     );
 }

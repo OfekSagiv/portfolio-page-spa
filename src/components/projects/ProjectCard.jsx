@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Stack } from "@mui/material";
-import { CardHeading } from "../common/SectionLayout";
-import PrimaryButton from "../common/PrimaryButton";
+import { CardHeading } from "../shared/style/section.styles.js";
+import PrimaryButton from "../shared/button/PrimaryButton.jsx";
 import { PROJECT_BUTTON_LABELS } from "../../constants/projectLabels";
 
 const ProjectCard = ({
