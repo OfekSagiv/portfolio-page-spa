@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Box} from "@mui/material";
-
 import "./App.css";
-
 import About from "./components/about/About.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";

@@ -6,7 +6,7 @@ import {CONTACT_FORM_LABELS} from "../../constants/contactFormLabels.js";
 const ContactForm = ({formRef, handleSubmit}) => {
     return (
         <>
-            <Typography variant="h4" gutterBottom>{CONTACT_FORM_LABELS.heading}</Typography>
+            <Typography align={"center"} variant="h4" gutterBottom>{CONTACT_FORM_LABELS.heading}</Typography>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <Stack spacing={2}>
                     <TextField label={CONTACT_FORM_LABELS.name.label} name={CONTACT_FORM_LABELS.name.name} fullWidth

@@ -8,7 +8,7 @@ import {SECTION_TITLES} from "../../constants/messages.js";
 const ContactDetails = () => {
     return (
         <>
-            <Typography variant="h4" gutterBottom noWrap>{SECTION_TITLES.contact}</Typography>
+            <Typography align={"center"} variant="h4" gutterBottom noWrap>{SECTION_TITLES.contact}</Typography>
             <Stack spacing={5}>
                 <ContactRow icon={Icons.github} text={CONTACT_INFO.github.label} href={CONTACT_INFO.github.url}/>
                 <ContactRow icon={Icons.linkedin} text={CONTACT_INFO.linkedin.label} href={CONTACT_INFO.linkedin.url}/>

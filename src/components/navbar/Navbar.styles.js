@@ -25,8 +25,8 @@ export const NavLinksWrapper = styled(Box)(({ theme }) => ({
     },
 }));
 
-export const StyledButton = styled(Button)(({ theme }) => ({
-    fontWeight: 600,
+export const NavBarButton = styled(Button)(({ theme }) => ({
+    fontSize: "1rem",
     cursor: "pointer",
     color: "inherit",
     textDecoration: "none",

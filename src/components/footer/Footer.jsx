@@ -1,13 +1,12 @@
 import React from "react";
-import { FooterContainer, FooterText } from "./Footer.styles";
+import { FooterContainer, } from "./Footer.styles";
 import { COPYRIGHT_TEXT } from "../../constants/siteMeta";
+import {Typography} from "@mui/material";
 
 const Footer = () => {
     return (
         <FooterContainer component="footer">
-            <FooterText variant="body2">
-                {COPYRIGHT_TEXT}
-            </FooterText>
+            <Typography variant="body2">{COPYRIGHT_TEXT}</Typography>
         </FooterContainer>
     );
 };

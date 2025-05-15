@@ -1,10 +1,5 @@
 import React from "react";
-import {
-    NavbarContainer,
-    CustomToolbar,
-    NavLinksWrapper,
-    StyledButton,
-} from "./Navbar.styles";
+import {NavbarContainer, CustomToolbar, NavLinksWrapper, NavBarButton} from "./Navbar.styles";
 
 import useNavbarLogic from "../../hooks/useNavbarLogic";
 import { NAV_TABS } from "../../constants/navigation";
@@ -22,14 +17,14 @@ const Navbar = ({ onSelect, selected, mode, toggleTheme }) => {
 
                 <NavLinksWrapper ref={navLinksRef}>
                     {NAV_TABS.map((tab) => (
-                        <StyledButton
+                        <NavBarButton
                             key={tab}
                             onClick={() => handleSelect(tab)}
                             className={selected === tab ? "active" : ""}
                             disableRipple
                         >
                             {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                        </StyledButton>
+                        </NavBarButton>
                     ))}
                     <Tooltip title="Toggle theme">
                         <IconButton onClick={toggleTheme} color="inherit">

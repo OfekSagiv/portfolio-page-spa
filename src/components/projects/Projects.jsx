@@ -8,20 +8,19 @@ const Projects = () => {
     const project = PROJECTS[0];
 
     return (
-        <>
-            <ProjectCard
-                title={project.title}
-                description={project.description}
-                demoText={project.demoText}
-                demoLink={project.demoLink}
-                demoIcon={Icons[project.demoIcon]}
-                codeText={project.codeText}
-                codeLink={project.codeLink}
-                codeIcon={Icons[project.codeIcon]}
-            />
+       <>
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    demoText={project.demoText}
+                    demoLink={project.demoLink}
+                    demoIcon={Icons[project.demoIcon]}
+                    codeText={project.codeText}
+                    codeLink={project.codeLink}
+                    codeIcon={Icons[project.codeIcon]}
+                />
 
-            <StyledProjectImage src={project.image} alt="Project thumbnail"/>
-
+            <StyledProjectImage src={project.image} alt="Project thumbnail" />
         </>
     );
 };

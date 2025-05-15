@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { MESSAGES } from "../constants/messages";
+import { MESSAGES } from "/../constants/messages";
 
 export const useContactForm = () => {
-    const formRef = useRef();
+    const formRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
