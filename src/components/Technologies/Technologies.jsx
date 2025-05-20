@@ -8,7 +8,7 @@ import {Box, Typography} from "@mui/material";
 function Technologies() {
     return (
         <>
-            <Box sx={{ flex: 1 }}>
+            <Box sx={{ flex: 1 }} >
                 <Box sx={{ textAlign: "center", mb: 6 }}>
                     <Typography variant="h4">Explore my skills</Typography>
                 </Box>

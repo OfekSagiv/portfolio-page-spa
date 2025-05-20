@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { MESSAGES } from "/../constants/messages";
+import { MESSAGES } from "../constants/messages";
 
 export const useContactForm = () => {
     const formRef = useRef(null);
@@ -15,11 +15,11 @@ export const useContactForm = () => {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
             .then(() => {
-                alert(MESSAGES.success);
+                alert(MESSAGES.SUCCESS);
             })
             .catch((error) => {
-                console.error("Failed to send:", error);
-                alert(MESSAGES.error);
+                console.error(MESSAGES.FAILED_TO_SEND, error);
+                alert(MESSAGES.ERROR);
             });
     };
 

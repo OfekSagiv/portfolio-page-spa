@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
+import {Typography} from "@mui/material";
 
 export const StyledAvatar = styled(Avatar)(() => ({
     width: 300,
@@ -11,8 +11,16 @@ export const StyledAvatar = styled(Avatar)(() => ({
     display: "block",
 }));
 
-export const CVButtonWrapper = styled(Box)(({ theme }) => ({
-    marginTop: theme.spacing(4),
-    display: "flex",
-    justifyContent: "center",
+export const GreetingText = styled(Typography)(({ theme }) => ({
+    fontSize: theme.typography.h6.fontSize,
+}));
+
+export const NameText = styled(Typography)(({ theme }) => ({
+    fontSize: theme.typography.h4.fontSize,
+    paddingBottom: theme.spacing(2.5),
+}));
+
+export const DescriptionText = styled(Typography)(() => ({
+    maxWidth: 500,
+    lineHeight: 1.6,
 }));

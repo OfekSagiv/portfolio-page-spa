@@ -8,7 +8,7 @@ import {CheckCircle} from "@mui/icons-material";
 
 export default function SkillCard({ title, skills }) {
     return (
-        <CardWrapper>
+        <CardWrapper >
             <Typography variant="h6" align="center" sx={{mb:3}}>{title}</Typography>
             {skills.map((skill) => (
                 <Box key={skill.name} sx={{mb : 2}}>

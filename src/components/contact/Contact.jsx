@@ -1,8 +1,9 @@
 import React from "react";
-import {Box, Divider} from "@mui/material";
+import {Box} from "@mui/material";
 import {useContactForm} from "../../hooks/useContactForm";
 import ContactForm from "./ContactForm.jsx";
 import ContactDetails from "./ContactDetails.jsx";
+import ResponsiveDivider from "../shared/divider/ResponsiveDivider.jsx";
 
 
 const Contact = () => {
@@ -13,8 +14,7 @@ const Contact = () => {
             <Box>
                 <ContactForm formRef={formRef} handleSubmit={handleSubmit}/>
             </Box>
-            <Divider orientation="vertical" flexItem
-                     sx={{borderColor: "divider", mx: 1, display: {xs: "none", md: "block"},}}/>
+            <ResponsiveDivider/>
             <Box sx={{flex: 1, display: "flex", flexDirection: "column", height: "100%"}}>
                 <ContactDetails/>
             </Box>

@@ -1,7 +1,9 @@
 import React from "react";
 import {Stack, TextField, Typography} from "@mui/material";
-import PrimaryButton from "../shared/button/PrimaryButton";
 import {CONTACT_FORM_LABELS} from "../../constants/contactFormLabels.js";
+import {CONTACT_FIELDS} from "../../constants/contactFormFields.js";
+import {StyledButtonFull} from "../shared/button/PrimaryButton.styles.js";
+
 
 const ContactForm = ({formRef, handleSubmit}) => {
     return (
@@ -9,16 +11,15 @@ const ContactForm = ({formRef, handleSubmit}) => {
             <Typography align={"center"} variant="h4" gutterBottom>{CONTACT_FORM_LABELS.heading}</Typography>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <Stack spacing={2}>
-                    <TextField label={CONTACT_FORM_LABELS.name.label} name={CONTACT_FORM_LABELS.name.name} fullWidth
-                               required/>
-                    <TextField label={CONTACT_FORM_LABELS.email.label} name={CONTACT_FORM_LABELS.email.name}
-                               type={CONTACT_FORM_LABELS.email.type} fullWidth required/>
-                    <TextField label={CONTACT_FORM_LABELS.message.label} name={CONTACT_FORM_LABELS.message.name}
-                               multiline rows={4} fullWidth required/>
+                    {CONTACT_FIELDS.map((
+                        {name, label, type, multiline, rows}) => (
+                        <TextField key={name} label={label} name={name} type={type} fullWidth required
+                                   multiline={multiline} rows={rows || undefined}/>
+                    ))}
                 </Stack>
-                <PrimaryButton type={CONTACT_FORM_LABELS.button.type} sx={{width: "100%", mt: 2}}>
+                <StyledButtonFull type={CONTACT_FORM_LABELS.button.type}>
                     {CONTACT_FORM_LABELS.button.text}
-                </PrimaryButton>
+                </StyledButtonFull>
             </form>
         </>
     );

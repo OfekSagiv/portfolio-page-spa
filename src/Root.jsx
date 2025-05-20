@@ -8,7 +8,7 @@ export default function Root() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <App mode={mode} toggleTheme={toggleTheme} />
+            <App mode={mode} toggleTheme={toggleTheme}  />
         </ThemeProvider>
     );
 }

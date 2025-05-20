@@ -9,7 +9,7 @@ const Projects = () => {
 
     return (
        <>
-                <ProjectCard
+                < ProjectCard
                     title={project.title}
                     description={project.description}
                     demoText={project.demoText}

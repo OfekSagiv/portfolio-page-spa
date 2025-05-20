@@ -4,7 +4,7 @@ import { THEME } from '../constants/themeConst';
 
 export const useThemeMode = () => {
     const [mode, setMode] = useState(() => {
-        return localStorage.getItem(THEME.KEY) || THEME.LIGHT;
+        return localStorage.getItem(THEME.KEY) || THEME.LIGHT; //TODO: move to service
     });
 
     const toggleTheme = () => {

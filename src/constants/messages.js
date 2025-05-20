@@ -1,9 +1,10 @@
 export const MESSAGES = {
-    success: "Message sent successfully!",
-    error: "Something went wrong. Please try again.",
+    SUCCESS: "Message sent successfully!",
+    ERROR: "Something went wrong. Please try again.",
+    FAILED_TO_SEND:"Failed to send:"
 };
 
 export const SECTION_TITLES = {
-    contact: "Reach me directly",
+    CONTACT: "Reach me directly",
 };
 

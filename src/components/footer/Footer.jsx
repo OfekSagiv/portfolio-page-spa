@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <FooterContainer component="footer">
             <Typography variant="body2">{COPYRIGHT_TEXT}</Typography>
-        </FooterContainer>
+        </FooterContainer >
     );
 };
 

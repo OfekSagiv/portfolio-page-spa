@@ -21,7 +21,7 @@ export const NavLinksWrapper = styled(Box)(({ theme }) => ({
     overflowX: "auto",
     scrollbarWidth: "none",
     "&::-webkit-scrollbar": {
-        display: "none",
+        display: "none" ,
     },
 }));
 

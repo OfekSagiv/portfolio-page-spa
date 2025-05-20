@@ -9,10 +9,10 @@ const commonCardStyles = (theme) => ({
     borderRadius: 12,
 });
 
-export const Section = styled("section")(() => ({
+export const CustomSection = styled("section")(() => ({
     flex: 1,
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center" ,
     alignItems: "center",
     paddingTop: "80px",
 }));

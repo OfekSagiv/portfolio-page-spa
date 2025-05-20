@@ -11,7 +11,7 @@ const ContactRow = ({icon, text, href}) => {
                 </Link>) : (
                 <Typography sx={{fontSize: "1.5rem"}}>{text}</Typography>
             )}
-        </Stack>
+        </Stack >
     );
 };
 

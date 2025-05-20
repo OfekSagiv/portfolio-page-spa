@@ -1,44 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import { Box} from "@mui/material";
 import "./App.css";
-import About from "./components/about/About.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import Technologies from "./components/Technologies/Technologies.jsx";
-import Projects from "./components/projects/Projects.jsx";
-import Contact from "./components/contact/Contact.jsx";
-import {CardContainer, Section} from "./components/shared/style/section.styles.js";
+import {CardContainer, CustomSection} from "./components/shared/style/section.styles.js";
+import {SECTION_IDS} from "./constants/sectionIds.js";
+import {SECTION_COMPONENTS} from "./constants/sectionComponents.jsx";
 
 function App({mode, toggleTheme}) {
-    const [section, setSection] = useState("about");
+    const [section, setSection] = useState(SECTION_IDS.ABOUT);
 
-    const renderSection = () => {
-        switch (section) {
-            case "about":
-                return <About/>;
-            case "technologies":
-                return <Technologies/>;
-            case "projects":
-                return <Projects/>;
-            case "contact":
-                return <Contact/>;
-            default:
-                return <About/>;
-        }
-    };
-
-    useEffect(() => {
-        window.scrollTo({top: 0, behavior: "smooth"});
-    }, [section]);
+    const currentSection = SECTION_COMPONENTS[section] || SECTION_COMPONENTS.about;
 
     return (
         <Box sx={{display: "flex", flexDirection: "column", minHeight: "100vh",}}>
             <Navbar onSelect={setSection} selected={section} mode={mode} toggleTheme={toggleTheme}/>
-            <Section component="main" >
-                <CardContainer>
-                        {renderSection()}
+            <CustomSection component="main" >
+                <CardContainer >
+                        {currentSection}
                 </CardContainer>
-            </Section>
+            </CustomSection>
             <Footer/>
         </Box>
     );

@@ -13,7 +13,7 @@ export const backend = [
 ];
 
 export const tools = [
-    { name: "Git & GitHub", value: 90 },
+    { name: "Git & GitHub", value: 90 } ,
     { name: "Docker", value: 95 },
     { name: "Postman", value: 70 },
     { name: "Swagger", value: 70 },

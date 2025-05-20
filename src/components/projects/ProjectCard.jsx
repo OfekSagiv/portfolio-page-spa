@@ -2,13 +2,12 @@ import React from "react";
 import {Typography, Stack, Box} from "@mui/material";
 import PrimaryButton from "../shared/button/PrimaryButton.jsx";
 import {PROJECT_BUTTON_LABELS} from "../../constants/projectLabels";
+import {ProjectCardContainer} from "./Projects.styles.js";
 
 const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink, demoIcon, codeIcon,}) => {
 
     return (
-        <Box sx={{
-            flex: 1, height: 350, display: "flex", flexDirection: "column", justifyContent: "space-between", pb: 5,
-        }}>
+        <ProjectCardContainer>
             <Typography align={"center"} variant="h4">{title}</Typography>
             <Typography variant="body1">{description}</Typography>
 
@@ -31,11 +30,11 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
 
                     <PrimaryButton href={codeLink} target="_blank" endIcon={codeIcon} sx={{mr: "20px"}}>
                         {PROJECT_BUTTON_LABELS.code}
-                    </PrimaryButton>
+                    </PrimaryButton >
                 </Box>
 
             </Stack>
-        </Box>
+        </ProjectCardContainer>
     );
 };
 

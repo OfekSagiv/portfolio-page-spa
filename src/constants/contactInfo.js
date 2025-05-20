@@ -9,5 +9,5 @@ export const CONTACT_INFO = {
         url: "https://linkedin.com/in/ofek-sagiv",
     },
     phone: "NA",
-    location: "Tel Aviv, Israel",
+    location: "Tel Aviv, Israel" ,
 };

@@ -6,5 +6,5 @@ export const SkillsGrid = styled(Box)(({ theme }) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     gap: theme.spacing(3),
-    width: "100%",
+    width: "100%" ,
 }));

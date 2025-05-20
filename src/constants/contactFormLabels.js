@@ -1,7 +1,7 @@
 export const CONTACT_FORM_LABELS = {
     heading: "Contact Me",
     name: {
-        label: "Name",
+        label: "Name" ,
         name: "name",
     },
     email: {

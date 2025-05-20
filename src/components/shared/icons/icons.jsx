@@ -7,7 +7,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import DownloadIcon from "@mui/icons-material/Download";
 
 export const Icons = {
-    github: <GitHubIcon/>,
+    github: <GitHubIcon/> ,
     linkedin: <LinkedInIcon/>,
     email: <EmailIcon/>,
     phone: <PhoneIcon/>,
