@@ -13,9 +13,15 @@ export const backend = [
 ];
 
 export const tools = [
-    { name: "Git & GitHub", value: 90 },
+    { name: "Git & GitHub", value: 90 } ,
     { name: "Docker", value: 95 },
     { name: "Postman", value: 70 },
     { name: "Swagger", value: 70 },
     { name: "RESTful API", value: 70 },
+];
+
+export const skillSections = [
+    { title: "Frontend Development", skills: frontend },
+    { title: "Backend Development", skills: backend },
+    { title: "Technologies & Tools", skills: tools },
 ];

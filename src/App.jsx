@@ -1,73 +1,26 @@
-import React, {useEffect, useState} from "react";
-import {Card, CardContent, Container} from "@mui/material";
-
+import React, { useState} from "react";
 import "./App.css";
-
-import About from "./components/about/About.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import Technologies from "./components/Technologies/Technologies.jsx";
-import Projects from "./components/projects/Projects.jsx";
-import Contact from "./components/contact/Contact.jsx";
-import Box from "@mui/material/Box";
+import {CardContainer, CustomSection, MainBox} from "./components/shared/elements/elements.styles.js";
+import {SECTION_IDS} from "./constants/section.js";
+import {SECTION_COMPONENTS} from "./components/shared/section/sectionObject.jsx";
 
+function App({mode, toggleTheme}) {
+    const [section, setSection] = useState(SECTION_IDS.ABOUT);
 
-
-function App() {
-    const [section, setSection] = useState("about");
-
-    const renderSection = () => {
-        switch (section) {
-            case "about":
-                return <About />;
-            case "technologies":
-                return <Technologies />;
-            case "projects":
-                return <Projects />;
-            case "contact":
-                return <Contact />;
-            default:
-                return <About />;
-        }
-    };
-
-    useEffect(() => {
-        window.scrollTo({top: 0, behavior: "smooth"});
-    }, [section]);
+    const currentSection = SECTION_COMPONENTS[section] || SECTION_COMPONENTS.about;
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                minHeight: "100vh",
-                backgroundColor: "background.default",
-                fontFamily: "Roboto, sans-serif",
-            }}
-        >
-            <Navbar onSelect={setSection} selected={section} />
-
-            <Box component="main" sx={{ flex: 1, pt: "80px" }}>
-                <Box
-                    component="section"
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        px: 2.5,
-                        py: 7.5,
-
-                    }}
-                >
-                    <Container maxWidth="lg">
-                        <Card elevation={1} >
-                            <CardContent>{renderSection()}</CardContent>
-                        </Card>
-                    </Container>
-                </Box>
-            </Box>
-
-            <Footer />
-        </Box>
+        <MainBox>
+            <Navbar onSelect={setSection} selected={section} mode={mode} toggleTheme={toggleTheme}/>
+            <CustomSection component="main" >
+                <CardContainer >
+                        {currentSection}
+                </CardContainer>
+            </CustomSection>
+            <Footer/>
+        </MainBox>
     );
 }
 
