@@ -1,4 +1,4 @@
-const aboutText = {
+const ABOUT_TEXT = {
     greeting: "Hello, I'm",
     name: "Your Name",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -10,4 +10,6 @@ const aboutText = {
     cvLabel: "Download my CV",
 };
 
-export default aboutText;
+export const COPYRIGHT_TEXT  = `© 2025 ${ABOUT_TEXT.name}. All rights reserved.`;
+
+export default ABOUT_TEXT;
