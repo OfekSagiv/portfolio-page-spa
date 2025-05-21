@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { getTheme } from '../theme/theme';
-import { THEME } from '../constants/themeConst';
+import { THEME } from '../constants/theme.js';
 
 export const useThemeMode = () => {
     const [mode, setMode] = useState(() => {

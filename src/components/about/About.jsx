@@ -1,19 +1,19 @@
 import React from "react";
 import {Box} from "@mui/material";
-import aboutText from "../../constants/aboutText";
+import HARD_TEXT from "../../constants/hardText.js";
 import {DescriptionText, GreetingText, NameText, StyledAvatar} from "./About.styles";
 
 const About = () => {
     return (
         <>
             <Box sx={{ flex: 1 }}>
-                <GreetingText>{aboutText.greeting}</GreetingText>
-                <NameText>{aboutText.name}</NameText>
-                <DescriptionText>{aboutText.description}</DescriptionText>
+                <GreetingText>{HARD_TEXT.GREETING}</GreetingText>
+                <NameText>{HARD_TEXT.NAME}</NameText>
+                <DescriptionText>{HARD_TEXT.DESCRIPTION}</DescriptionText>
             </Box>
 
             <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-                <StyledAvatar src={aboutText.avatarSrc} alt={aboutText.name} />
+                <StyledAvatar src={HARD_TEXT.AVATAR_SRC} alt={HARD_TEXT.NAME} />
             </Box>
         </>
     );

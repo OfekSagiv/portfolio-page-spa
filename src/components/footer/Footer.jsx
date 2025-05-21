@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterContainer, } from "./Footer.styles";
-import { COPYRIGHT_TEXT } from "../../constants/siteMeta";
+import { COPYRIGHT_TEXT } from "../../constants/hardText.js";
 import {Typography} from "@mui/material";
 
 const Footer = () => {

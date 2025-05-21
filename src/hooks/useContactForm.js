@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { MESSAGES } from "../constants/messages";
+import {ERROR_MESSAGES, MESSAGES} from "../constants/messages";
 
 export const useContactForm = () => {
     const formRef = useRef(null);
@@ -18,8 +18,8 @@ export const useContactForm = () => {
                 alert(MESSAGES.SUCCESS);
             })
             .catch((error) => {
-                console.error(MESSAGES.FAILED_TO_SEND, error);
-                alert(MESSAGES.ERROR);
+                console.error(ERROR_MESSAGES.FAILED_TO_SEND, error);
+                alert(ERROR_MESSAGES.ERROR);
             });
     };
 

@@ -2,7 +2,7 @@ import React from "react";
 import {Stack} from "@mui/material";
 import {StyledContactLink, StyledContactText} from "../shared/elements/elements.styles.js";
 
-const ContactRow = ({icon, text, href}) => {
+const SocialLinks = ({icon, text, href}) => {
     return (
         <Stack direction="row" spacing={1.5} alignItems="center">
             {icon}
@@ -16,4 +16,4 @@ const ContactRow = ({icon, text, href}) => {
     );
 };
 
-export default ContactRow;
+export default SocialLinks;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import {SkillLabel, SkillProgress, ProgressBar} from "./SkillCard.styles";
-import {CardWrapper} from "../shared/style/section.styles";
+import {CardWrapper} from "../shared/elements/elements.styles.js";
 import Box from "@mui/material/Box";
 import {Typography} from "@mui/material";
 import {CheckCircle} from "@mui/icons-material";

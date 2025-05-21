@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import {Typography ,Link} from "@mui/material";
 
 const commonCardStyles = (theme) => ({
     backgroundColor: theme.palette.background.paper,
@@ -36,4 +37,20 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
     padding: theme.spacing(3),
     flex: 1,
     minWidth: 270,
+}));
+
+export const MainBox = styled(Box)({
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+});
+
+export const StyledContactText = styled(Typography)({
+    fontSize: "1.5rem",
+});
+
+export const StyledContactLink = styled(Link)(({ theme }) => ({
+    fontSize: "1.5rem",
+    textDecoration: "none",
+    color: theme.palette.text.primary,
 }));

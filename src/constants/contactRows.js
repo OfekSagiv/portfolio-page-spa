@@ -1,12 +1,37 @@
-import {Icons} from "../components/shared/icons/icons.jsx";
-import {CONTACT_INFO} from "./contactInfo.js";
+import {ICONS} from "../components/shared/icons/icons.jsx";
 
-const CONTACT_ROWS = [
-    { icon: Icons.github, text: CONTACT_INFO.github.label, href: CONTACT_INFO.github.url },
-    { icon: Icons.linkedin, text: CONTACT_INFO.linkedin.label, href: CONTACT_INFO.linkedin.url },
-    { icon: Icons.email, text: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}` },
-    { icon: Icons.phone, text: CONTACT_INFO.phone },
-    { icon: Icons.location, text: CONTACT_INFO.location },
+const CONTACT_INFO = {
+    EMAIL: "ofeksagiv@gmail.com",
+    GITHUB_LABEL: "github.com/OfekSagiv",
+    GITHUB_URL: "https://github.com/OfekSagiv",
+    LINKEDIN_LABEL: "linkedin.com/in/ofeksagiv",
+    LINKEDIN_URL: "https://linkedin.com/in/ofek-sagiv",
+    PHONE: "NA",
+    LOCATION: "Tel Aviv, Israel",
+};
+
+export const SOCIAL_LINKS = [
+    {
+        icon: ICONS.github,
+        text: CONTACT_INFO.GITHUB_LABEL,
+        href: CONTACT_INFO.GITHUB_URL,
+    },
+    {
+        icon: ICONS.linkedin,
+        text: CONTACT_INFO.LINKEDIN_LABEL,
+        href: CONTACT_INFO.LINKEDIN_URL,
+    },
+    {
+        icon: ICONS.email,
+        text: CONTACT_INFO.EMAIL,
+        href: `mailto:${CONTACT_INFO.EMAIL}`,
+    },
+    {
+        icon: ICONS.phone,
+        text: CONTACT_INFO.PHONE,
+    },
+    {
+        icon: ICONS.location,
+        text: CONTACT_INFO.LOCATION,
+    },
 ];
-
-export { CONTACT_ROWS };

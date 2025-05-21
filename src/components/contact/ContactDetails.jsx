@@ -1,8 +1,8 @@
 import React from "react";
 import {Stack, Typography} from "@mui/material";
-import ContactRow from "./ContactRow.jsx";
+import SocialLinks from "./SocialLinks.jsx";
 import {SECTION_TITLES} from "../../constants/messages.js";
-import {CONTACT_ROWS} from "../../constants/contactRows.js";
+import {SOCIAL_LINKS} from "../../constants/contactRows.js";
 
 
 const ContactDetails = () => {
@@ -10,8 +10,8 @@ const ContactDetails = () => {
         <>
             <Typography align={"center"} variant="h4" gutterBottom noWrap>{SECTION_TITLES.CONTACT}</Typography>
             <Stack spacing={5}>
-                {CONTACT_ROWS.map(({ icon, text, href }, i) => (
-                    <ContactRow key={i} icon={icon} text={text} href={href} />
+                {SOCIAL_LINKS.map(({ icon, text, href }, i) => (
+                    <SocialLinks key={i} icon={icon} text={text} href={href} />
                 ))}
             </Stack>
         </>

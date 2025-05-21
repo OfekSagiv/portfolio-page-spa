@@ -1,7 +1,7 @@
 import React from "react";
 import {Typography, Stack, Box} from "@mui/material";
 import PrimaryButton from "../shared/button/PrimaryButton.jsx";
-import {PROJECT_BUTTON_LABELS} from "../../constants/projectLabels";
+import {PROJECT_BUTTON_LABELS} from "../../constants/projects.js";
 import {ProjectCardContainer} from "./Projects.styles.js";
 
 const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink, demoIcon, codeIcon,}) => {
@@ -19,7 +19,7 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
                     </Typography>
 
                     <PrimaryButton href={demoLink} target="_blank" endIcon={demoIcon} sx={{mr: "20px"}}>
-                        {PROJECT_BUTTON_LABELS.demo}
+                        {PROJECT_BUTTON_LABELS.SWAGGER}
                     </PrimaryButton>
                 </Box>
 
@@ -29,7 +29,7 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
                     </Typography>
 
                     <PrimaryButton href={codeLink} target="_blank" endIcon={codeIcon} sx={{mr: "20px"}}>
-                        {PROJECT_BUTTON_LABELS.code}
+                        {PROJECT_BUTTON_LABELS.GITHUB}
                     </PrimaryButton >
                 </Box>
 

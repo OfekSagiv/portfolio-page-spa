@@ -12,3 +12,8 @@ export const PROJECTS = [
         image: "/project-photo.png" ,
     },
 ];
+
+export const PROJECT_BUTTON_LABELS = {
+    SWAGGER: "Swagger UI",
+    GITHUB: "GitHub" ,
+};

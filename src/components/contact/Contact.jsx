@@ -15,7 +15,7 @@ const Contact = () => {
                 <ContactForm formRef={formRef} handleSubmit={handleSubmit}/>
             </Box>
             <ResponsiveDivider/>
-            <Box sx={{flex: 1, display: "flex", flexDirection: "column", height: "100%"}}>
+            <Box sx={{flex: 1, display: "flex", flexDirection: "column"}}>
                 <ContactDetails/>
             </Box>
         </Box>

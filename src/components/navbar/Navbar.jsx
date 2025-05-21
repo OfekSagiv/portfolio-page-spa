@@ -2,10 +2,10 @@ import React from "react";
 import {NavbarContainer, CustomToolbar, NavLinksWrapper, NavBarButton} from "./Navbar.styles";
 
 import useNavbarLogic from "./useNavbarLogic.js";
-import {NAV_TABS} from "../../constants/navigation";
+import {SECTION_TABS} from "../../constants/section.js";
 import {IconButton, Tooltip} from "@mui/material";
 import {Brightness4, Brightness7} from "@mui/icons-material";
-import {THEME} from "../../constants/themeConst.js";
+import {THEME} from "../../constants/theme.js";
 import {CLASSNAMES} from "../../constants/classNames.js";
 
 const Navbar = ({onSelect, selected, mode, toggleTheme}) => {
@@ -15,7 +15,7 @@ const Navbar = ({onSelect, selected, mode, toggleTheme}) => {
         <NavbarContainer position="fixed" color="default" elevation={1}>
             <CustomToolbar>
                 <NavLinksWrapper ref={navLinksRef}>
-                    {NAV_TABS.map((tab) =>
+                    {SECTION_TABS.map((tab) =>
                         (<NavBarButton key={tab} onClick={() => handleSelect(tab)}
                                       className={selected === tab ? CLASSNAMES.ACTIVE : ""}>
                             {tab}

@@ -6,7 +6,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import DownloadIcon from "@mui/icons-material/Download";
 
-export const Icons = {
+export const ICONS = {
     github: <GitHubIcon/> ,
     linkedin: <LinkedInIcon/>,
     email: <EmailIcon/>,
