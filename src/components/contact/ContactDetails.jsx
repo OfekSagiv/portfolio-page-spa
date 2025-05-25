@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack, Typography} from "@mui/material";
+import {Stack} from "@mui/material";
 import SocialLinks from "./SocialLinks.jsx";
 import {SECTION_TITLES} from "../../constants/messages.js";
 import {SOCIAL_LINKS} from "../../constants/contactRows.js";
