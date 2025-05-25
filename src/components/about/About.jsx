@@ -1,7 +1,6 @@
-import React from "react";
 import {Box} from "@mui/material";
 import HARD_TEXT from "../../constants/hardText.js";
-import {DescriptionText, GreetingText, NameText, StyledAvatar} from "./About.styles";
+import {ImageWrapper, DescriptionText, GreetingText, NameText, StyledAvatar} from "./About.styles";
 
 const About = () => {
     return (
@@ -12,9 +11,9 @@ const About = () => {
                 <DescriptionText>{HARD_TEXT.DESCRIPTION}</DescriptionText>
             </Box>
 
-            <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+            <ImageWrapper>
                 <StyledAvatar src={HARD_TEXT.AVATAR_SRC} alt={HARD_TEXT.NAME} />
-            </Box>
+            </ImageWrapper>
         </>
     );
 };

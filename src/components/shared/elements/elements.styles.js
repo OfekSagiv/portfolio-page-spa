@@ -16,6 +16,7 @@ export const CustomSection = styled("section")(() => ({
     justifyContent: "center" ,
     alignItems: "center",
     paddingTop: "80px",
+
 }));
 
 export const CardContainer = styled(Box)(({ theme }) => ({
@@ -30,9 +31,16 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     flexDirection: "row",
     borderRadius: 12,
     overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+        flexDirection: "column-reverse",
+        alignItems: "stretch",
+        textAlign: "center",
+        padding: theme.spacing(4, 3),
+        margin: theme.spacing(3, 2),
+    },
 }));
 
-export const CardWrapper = styled(Box)(({ theme }) => ({
+export const SkillsCardWrapper = styled(Box)(({ theme }) => ({
     ...commonCardStyles(theme),
     padding: theme.spacing(3),
     flex: 1,
@@ -54,3 +62,5 @@ export const StyledContactLink = styled(Link)(({ theme }) => ({
     textDecoration: "none",
     color: theme.palette.text.primary,
 }));
+
+

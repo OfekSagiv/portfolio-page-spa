@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import {StyledProjectImage} from "./Projects.styles";
 import {PROJECTS} from "../../constants/projects.js";
 import {ICONS} from "../shared/icons/icons.jsx";
+import {ImageWrapper} from "../about/About.styles.js";
 
 const Projects = () => {
     const project = PROJECTS[0];
@@ -19,8 +20,9 @@ const Projects = () => {
                     codeLink={project.codeLink}
                     codeIcon={ICONS[project.codeIcon]}
                 />
-
+            <ImageWrapper>
             <StyledProjectImage src={project.image} alt="Project thumbnail" />
+            </ImageWrapper>
         </>
     );
 };

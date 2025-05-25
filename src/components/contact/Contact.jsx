@@ -4,13 +4,14 @@ import {useContactForm} from "../../hooks/useContactForm";
 import ContactForm from "./ContactForm.jsx";
 import ContactDetails from "./ContactDetails.jsx";
 import ResponsiveDivider from "../shared/divider/ResponsiveDivider.jsx";
+import {ContactContainer} from "./contact.styles.js";
 
 
 const Contact = () => {
     const {formRef, handleSubmit} = useContactForm();
 
     return (
-        <Box sx={{display: "flex", gap: 4}}>
+        <ContactContainer>
             <Box>
                 <ContactForm formRef={formRef} handleSubmit={handleSubmit}/>
             </Box>
@@ -18,7 +19,7 @@ const Contact = () => {
             <Box sx={{flex: 1, display: "flex", flexDirection: "column"}}>
                 <ContactDetails/>
             </Box>
-        </Box>
+            </ContactContainer>
     );
 };
 
