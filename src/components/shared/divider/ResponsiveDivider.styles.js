@@ -17,7 +17,7 @@ export const StyledDivider = styled(Divider)(({ theme }) => ({
     margin: theme.spacing(2, 0),
 
     [theme.breakpoints.up("md")]: {
-        margin: theme.spacing(0, 2),
+        margin: theme.spacing(0, 8),
         height: "auto",
         alignSelf: "stretch",
         borderLeftWidth: 1,
@@ -28,5 +28,6 @@ export const StyledDivider = styled(Divider)(({ theme }) => ({
         width: "100%",
         borderTopWidth: 1,
         borderBottomWidth: 0,
+        margin: theme.spacing(6, 0),
     },
 }));

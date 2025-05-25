@@ -1,14 +1,13 @@
 import React from "react";
 import {Stack, TextField, Typography} from "@mui/material";
 import {StyledButtonFull} from "../shared/button/PrimaryButton.styles.js";
+import {StyledContactTitle} from "./contact.styles.js";
 
 
 const ContactForm = ({formRef, handleSubmit}) => {
     return (
         <>
-            <Typography align="center" variant="h4" gutterBottom>
-                Contact Me
-            </Typography>
+            <StyledContactTitle variant="h4" gutterBottom noWrap>Contact Me</StyledContactTitle>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <Stack spacing={2}>
                     <TextField name="name" label="Name" type="text" fullWidth required />

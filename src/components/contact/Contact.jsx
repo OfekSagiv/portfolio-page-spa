@@ -12,11 +12,11 @@ const Contact = () => {
 
     return (
         <ContactContainer>
-            <Box>
+            <Box sx={{flex: 1}}>
                 <ContactForm formRef={formRef} handleSubmit={handleSubmit}/>
             </Box>
             <ResponsiveDivider/>
-            <Box sx={{flex: 1, display: "flex", flexDirection: "column"}}>
+            <Box sx={{flex: 1}}>
                 <ContactDetails/>
             </Box>
             </ContactContainer>
