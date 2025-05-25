@@ -17,6 +17,8 @@ export const CustomToolbar = styled(Toolbar)(({ theme }) => ({
 
 export const NavLinksWrapper = styled(Box)(({ theme }) => ({
     display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     gap: theme.spacing(4),
     overflowX: "auto",
     scrollbarWidth: "none",
@@ -25,16 +27,15 @@ export const NavLinksWrapper = styled(Box)(({ theme }) => ({
     },
 }));
 
-export const StyledButton = styled(Button)(({ theme }) => ({
-    fontWeight: 600,
-    cursor: "pointer",
+export const NavBarButton = styled(Button)(({ theme }) => ({
+    minWidth: "auto",
+    padding: 0,
+    fontSize: "1rem",
     color: "inherit",
-    textDecoration: "none",
-    padding: theme.spacing(1, 2),
+    textTransform: "capitalize",
     borderBottom: "2px solid transparent",
     transition: "border-bottom 0.2s ease",
     whiteSpace: "nowrap",
-    textTransform: "capitalize",
     "&.active": {
         borderBottom: `2px solid ${theme.palette.text.primary}`,
     },

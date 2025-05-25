@@ -1,39 +1,24 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 
-export const CardWrapper = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.grey[100],
-    borderRadius: theme.shape.borderRadius * 3,
-    padding: theme.spacing(3),
-    boxShadow: theme.shadows[1],
-    flex: 1,
-    minWidth: 250,
-}));
-
-export const CardTitle = styled(Typography)(({ theme }) => ({
-    fontSize: "1.25rem",
-    fontWeight: 600,
-    marginBottom: theme.spacing(2),
-}));
 
 export const SkillLabel = styled(Box)(({ theme }) => ({
-    display: "flex",
+    display: "flex" ,
     alignItems: "center",
     gap: theme.spacing(1),
     marginBottom: theme.spacing(0.5),
+    color: theme.palette.text.primary,
 }));
 
-
 export const SkillProgress = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.grey[300],
+    backgroundColor: theme.palette.divider,
     height: 8,
     borderRadius: 4,
     overflow: "hidden",
 }));
 
 export const ProgressBar = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.grey[900],
+    backgroundColor: theme.palette.primary.main,
     height: "100%",
     transition: "width 0.3s ease-in-out",
 }));

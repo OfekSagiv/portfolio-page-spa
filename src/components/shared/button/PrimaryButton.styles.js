@@ -18,6 +18,11 @@ export const StyledButton = styled(Button)(({ theme }) => ({
     "&:hover": {
         backgroundPosition: "right center",
         color: "#fff",
-        textDecoration: "none",
+        textDecoration: "none" ,
     },
+}));
+
+export const StyledButtonFull = styled(StyledButton)(({ theme }) => ({
+    width: "100%",
+    marginTop: theme.spacing(2),
 }));

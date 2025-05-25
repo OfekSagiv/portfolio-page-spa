@@ -9,6 +9,11 @@ export const PROJECTS = [
         codeText: "View the source code on GitHub",
         codeLink: "https://github.com/OfekSagiv/book-management",
         codeIcon: "github",
-        image: "/project-photo.png",
+        image: "/project-photo.png" ,
     },
 ];
+
+export const PROJECT_BUTTON_LABELS = {
+    SWAGGER: "Swagger UI",
+    GITHUB: "GitHub" ,
+};

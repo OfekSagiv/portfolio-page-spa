@@ -1,65 +1,40 @@
 import React from "react";
-import { Typography, Stack } from "@mui/material";
-import { CardHeading } from "../common/SectionLayout";
-import PrimaryButton from "../common/PrimaryButton";
-import { PROJECT_BUTTON_LABELS } from "../../constants/projectLabels";
+import {Typography, Stack, Box} from "@mui/material";
+import PrimaryButton from "../shared/button/PrimaryButton.jsx";
+import {PROJECT_BUTTON_LABELS} from "../../constants/projects.js";
+import {ProjectCardContainer , ProjectButtonRow} from "./Projects.styles.js";
 
-const ProjectCard = ({
-                         title,
-                         description,
-                         demoText,
-                         demoLink,
-                         codeText,
-                         codeLink,
-                         demoIcon,
-                         codeIcon,
-                     }) => {
+const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink, demoIcon, codeIcon,}) => {
+
     return (
-        <div>
-            <CardHeading gutterBottom>{title}</CardHeading>
-            <Typography variant="body1" sx={{ maxWidth: 500, lineHeight: 1.6, mb: 3 }}>
-                {description}
-            </Typography>
+        <ProjectCardContainer>
+            <Typography align={"center"} variant="h4" sx={{mb: 3}}>{title}</Typography>
+            <Typography variant="body1" sx={{mb: 3}}>{description}</Typography>
 
-            <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={2}
-                alignItems="center"
-                justifyContent="space-between"
-                sx={{ mb: 4 }}
-            >
-                <Typography variant="h6" sx={{ whiteSpace: "nowrap" }}>
-                    {demoText}
-                </Typography>
+            <Stack direction="column" spacing={4}>
 
-                <PrimaryButton
-                    href={demoLink}
-                    target="_blank"
-                    endIcon={demoIcon}
-                >
-                    {PROJECT_BUTTON_LABELS.demo}
-                </PrimaryButton>
+                <ProjectButtonRow>
+                    <Typography variant="h6" sx={{mb: 1, whiteSpace: "nowrap"}}>
+                        {demoText}
+                    </Typography>
+
+                    <PrimaryButton href={demoLink} target="_blank" endIcon={demoIcon} >
+                        {PROJECT_BUTTON_LABELS.SWAGGER}
+                    </PrimaryButton>
+                </ProjectButtonRow>
+
+                <ProjectButtonRow>
+                    <Typography variant="h6" sx={{mb: 1, whiteSpace: "nowrap"}}>
+                        {codeText}
+                    </Typography>
+
+                    <PrimaryButton href={codeLink} target="_blank" endIcon={codeIcon}>
+                        {PROJECT_BUTTON_LABELS.GITHUB}
+                    </PrimaryButton >
+                </ProjectButtonRow>
+
             </Stack>
-
-            <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={2}
-                alignItems="center"
-                justifyContent="space-between"
-            >
-                <Typography variant="h6" sx={{ whiteSpace: "nowrap" }}>
-                    {codeText}
-                </Typography>
-
-                <PrimaryButton
-                    href={codeLink}
-                    target="_blank"
-                    endIcon={codeIcon}
-                >
-                    {PROJECT_BUTTON_LABELS.code}
-                </PrimaryButton>
-            </Stack>
-        </div>
+        </ProjectCardContainer>
     );
 };
 

@@ -1,44 +1,20 @@
-import React from "react";
-import {Typography} from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
-import aboutText from "../../constants/aboutText";
-import {
-    Section,
-    CardContainer, SideColumn,
-} from "../common/SectionLayout.js";
-import {
-    StyledAvatar,
-    CVButtonWrapper,
-} from "./About.styles";
-import Box from "@mui/material/Box";
-import PrimaryButton from "../common/PrimaryButton.jsx";
+import {Box} from "@mui/material";
+import HARD_TEXT from "../../constants/hardText.js";
+import {ImageWrapper, DescriptionText, GreetingText, NameText, StyledAvatar} from "./About.styles";
 
 const About = () => {
     return (
-        <Section id="about">
-            <CardContainer>
-                <Box>
-                    <Typography variant="h6">
-                        {aboutText.greeting}
-                    </Typography>
-                    <Typography variant="h4" sx={{pb: 2.5}}>
-                        {aboutText.name}
-                    </Typography>
-                    <Typography variant="body1" sx={{maxWidth: 500, lineHeight: 1.6}}>
-                        {aboutText.description}
-                    </Typography>
+        <>
+            <Box sx={{ flex: 1 }}>
+                <GreetingText>{HARD_TEXT.GREETING}</GreetingText>
+                <NameText>{HARD_TEXT.NAME}</NameText>
+                <DescriptionText>{HARD_TEXT.DESCRIPTION}</DescriptionText>
+            </Box>
 
-                    <CVButtonWrapper>
-                        <PrimaryButton href="/cv.pdf" download endIcon={<DownloadIcon/>}>
-                            Download my CV
-                        </PrimaryButton>
-                    </CVButtonWrapper>
-                </Box>
-                <SideColumn>
-                    <StyledAvatar src="/photo.png" alt="Ofek Sagiv"/>
-                </SideColumn>
-            </CardContainer>
-        </Section>
+            <ImageWrapper>
+                <StyledAvatar src={HARD_TEXT.AVATAR_SRC} alt={HARD_TEXT.NAME} />
+            </ImageWrapper>
+        </>
     );
 };
 

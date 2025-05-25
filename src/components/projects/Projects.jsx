@@ -1,24 +1,16 @@
 import React from "react";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { Section, CardContainer, SideColumn } from "../common/SectionLayout";
 import ProjectCard from "./ProjectCard";
-import { ProjectImageBox, StyledProjectImage } from "./Projects.styles";
-import { PROJECTS } from "../../constants/projectsData";
-
-
-const ICONS = {
-    external: <OpenInNewIcon />,
-    github: <GitHubIcon />,
-};
+import {StyledProjectImage} from "./Projects.styles";
+import {PROJECTS} from "../../constants/projects.js";
+import {ICONS} from "../shared/icons/icons.jsx";
+import {ImageWrapper} from "../about/About.styles.js";
 
 const Projects = () => {
     const project = PROJECTS[0];
 
     return (
-        <Section id="projects">
-            <CardContainer>
-                <ProjectCard
+       <>
+                < ProjectCard
                     title={project.title}
                     description={project.description}
                     demoText={project.demoText}
@@ -28,13 +20,10 @@ const Projects = () => {
                     codeLink={project.codeLink}
                     codeIcon={ICONS[project.codeIcon]}
                 />
-                <SideColumn>
-                    <ProjectImageBox>
-                        <StyledProjectImage src={project.image} alt="Project thumbnail" />
-                    </ProjectImageBox>
-                </SideColumn>
-            </CardContainer>
-        </Section>
+            <ImageWrapper>
+            <StyledProjectImage src={project.image} alt="Project thumbnail" />
+            </ImageWrapper>
+        </>
     );
 };
 

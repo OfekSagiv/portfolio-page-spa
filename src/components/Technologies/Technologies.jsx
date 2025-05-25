@@ -1,32 +1,24 @@
 import React from "react";
 import SkillCard from "../SkillCard/SkillCard";
-import {
-    Section,
-    CardContainer,
-    CardHeading
-} from "../common/SectionLayout.js";
-import {
-    SkillsContainer,
+import {SkillsGrid} from "./Technologies.styles";
 
-    SkillsGrid,
-} from "./Technologies.styles";
-
-import { frontend, backend, tools } from "../../constants/skillsData";
+import {skillSections} from "../../constants/skillsData";
+import {Box, Typography} from "@mui/material";
 
 function Technologies() {
     return (
-        <Section id="skills" >
-            <CardContainer>
-                <SkillsContainer>
-                    <CardHeading>Explore my skills</CardHeading>
-                    <SkillsGrid>
-                        <SkillCard title="Frontend Development" skills={frontend} />
-                        <SkillCard title="Backend Development" skills={backend} />
-                        <SkillCard title="Technologies & Tools" skills={tools} />
-                    </SkillsGrid>
-                </SkillsContainer>
-            </CardContainer>
-        </Section>
+        <>
+            <Box sx={{ flex: 1 }} >
+                <Box sx={{ textAlign: "center", mb: 6 }}>
+                    <Typography variant="h4">Explore my skills</Typography>
+                </Box>
+                <SkillsGrid>
+                    {skillSections.map(({ title, skills }) => (
+                        <SkillCard key={title} title={title} skills={skills} />
+                    ))}
+                </SkillsGrid>
+            </Box>
+        </>
     );
 }
 
