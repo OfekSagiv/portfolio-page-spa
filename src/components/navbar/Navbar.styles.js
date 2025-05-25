@@ -31,6 +31,7 @@ export const NavBarButton = styled(Button)(({ theme }) => ({
     minWidth: "auto",
     padding: 0,
     fontSize: "1rem",
+    fontWeight: "bold",
     color: "inherit",
     textTransform: "capitalize",
     borderBottom: "2px solid transparent",
