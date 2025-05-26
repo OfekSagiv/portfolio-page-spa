@@ -2,14 +2,6 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import {Typography ,Link} from "@mui/material";
 
-const commonCardStyles = (theme) => ({
-    backgroundColor: theme.palette.background.paper,
-    color: theme.palette.text.primary,
-    border: theme.palette.mode === "light" ? "1.5px solid #c0c0c0" : "1.5px solid #333",
-    boxShadow: theme.palette.mode === "light" ? "0 4px 16px rgba(0,0,0,0.12)" : "0 4px 16px rgba(0,0,0,0.5)",
-    borderRadius: 12,
-});
-
 export const CustomSection = styled("section")(() => ({
     flex: 1,
     display: "flex",
@@ -18,9 +10,18 @@ export const CustomSection = styled("section")(() => ({
     paddingTop: "80px",
 }));
 
+export const commonCardStyles = (theme) => ({
+    backgroundColor: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    border: theme.palette.mode === "light" ? "1.5px solid #c0c0c0" : "1.5px solid #333",
+    boxShadow: theme.palette.mode === "light" ? "0 4px 16px rgba(0,0,0,0.12)" : "0 4px 16px rgba(0,0,0,0.5)",
+    borderRadius: 12,
+});
+
 export const CardContainer = styled(Box)(({ theme }) => ({
     ...commonCardStyles(theme),
     display: "flex",
+    flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "space-between",
     maxWidth: "1200px",
@@ -32,10 +33,7 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     overflow: "hidden",
     [theme.breakpoints.up("md")]: {
         width: "1000px",
-        height: "600px",
     },
-
-
     [theme.breakpoints.down("md")]: {
         boxSizing: 'border-box',
         width: "100%",

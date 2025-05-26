@@ -8,7 +8,7 @@ export const ProjectCardContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.up("md")]: {
-        padding: theme.spacing(0, 12),
+        padding: theme.spacing(3, 12),
     },
     [theme.breakpoints.down("md")]: {
         alignItems: "stretch",

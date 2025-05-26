@@ -31,7 +31,7 @@ export const PROJECTS = [
             "\n" +
             "The system was built by a team guided by an industry mentor, using React and Express.js, with MongoDB for data management, JWT for user authentication, and full API documentation with Swagger.",
         demoText: "Still in progress – stay tuned!",
-        demoLink: "",
+        demoLink: "https://ofeksagiv.com",
         codeText: "View the source code on GitHub",
         codeLink: "https://github.com/orgs/colman-dev-project/repositories",
         image: "/project2-photo.png",

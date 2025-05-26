@@ -9,7 +9,7 @@ const ProjectsTabs = ({ selectedIndex, onChange }) => {
 
     return (
 
-        <StyledTabs  variant="scrollable" value={selectedIndex} onChange={(_, newIndex) => onChange(newIndex)} centered>
+        <StyledTabs variant="scrollable" value={selectedIndex} onChange={(_, newIndex) => onChange(newIndex)}>
             {Array.isArray(tabItems) ? tabItems : []}
         </StyledTabs>
     );
