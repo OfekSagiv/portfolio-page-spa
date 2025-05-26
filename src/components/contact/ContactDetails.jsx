@@ -10,7 +10,7 @@ const ContactDetails = () => {
     return (
         <>
             <StyledContactTitle variant="h4" gutterBottom noWrap>{SECTION_TITLES.CONTACT}</StyledContactTitle>
-            <Stack spacing={5}>
+            <Stack spacing={{ xs: 2, md: 5 }}>
                 {SOCIAL_LINKS.map(({ icon, text, href }, i) => (
                     <SocialLinks key={i} icon={icon} text={text} href={href} />
                 ))}

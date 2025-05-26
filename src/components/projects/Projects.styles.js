@@ -6,7 +6,6 @@ export const StyledProjectImage = styled("img")(({ theme }) => ({
     width: 350,
     height: 350,
     borderRadius: 6,
-
     boxShadow: "0 5px 20px rgba(0, 0, 0, 0.05)",
     [theme.breakpoints.down("md")]: {
         width: 220,
@@ -34,7 +33,6 @@ export const ProjectButtonRow = styled(Box)(({ theme }) => ({
     alignItems: "center",
     justifyContent: "space-between",
     gap: theme.spacing(1),
-
     [theme.breakpoints.down("sm")]: {
         flexDirection: "column",
         alignItems: "center",

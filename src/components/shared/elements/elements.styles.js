@@ -16,7 +16,6 @@ export const CustomSection = styled("section")(() => ({
     justifyContent: "center" ,
     alignItems: "center",
     paddingTop: "80px",
-
 }));
 
 export const CardContainer = styled(Box)(({ theme }) => ({
@@ -31,7 +30,10 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     flexDirection: "row",
     borderRadius: 12,
     overflow: "hidden",
+
     [theme.breakpoints.down("md")]: {
+        boxSizing: 'border-box',
+        width: "100%",
         flexDirection: "column-reverse",
         alignItems: "stretch",
         textAlign: "center",
