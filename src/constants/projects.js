@@ -24,6 +24,20 @@ export const PROJECTS = [
         demoIcon: "external",
         codeIcon: "github",
     },
+    {
+        title: "Locker It! (Soon)",
+        description:
+            "The project is an online marketplace for second-hand products, with a unique delivery process using smart lockers. The seller uploads a product, and the buyer purchases it through the site. The seller drops it off at a locker, and the buyer gets a notification and picks it up.\n" +
+            "\n" +
+            "The system was built by a team guided by an industry mentor, using React and Express.js, with MongoDB for data management, JWT for user authentication, and full API documentation with Swagger.",
+        demoText: "Still in progress – stay tuned!",
+        demoLink: "",
+        codeText: "View the source code on GitHub",
+        codeLink: "https://github.com/orgs/colman-dev-project/repositories",
+        image: "/project2-photo.png",
+        demoIcon: "external",
+        codeIcon: "github",
+    },
 ];
 
 export const PROJECT_BUTTON_LABELS = {

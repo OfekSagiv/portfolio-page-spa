@@ -17,6 +17,7 @@ export const StyledAvatar = styled(Avatar)(({ theme }) => ({
 
 export const GreetingText = styled(Typography)(({ theme }) => ({
     fontSize: theme.typography.h6.fontSize,
+
 }));
 
 export const NameText = styled(Typography)(({ theme }) => ({
@@ -24,10 +25,13 @@ export const NameText = styled(Typography)(({ theme }) => ({
     paddingBottom: theme.spacing(2.5),
 }));
 
-export const DescriptionText = styled(Typography)(() => ({
+export const DescriptionText = styled(Typography)(({ theme }) => ({
     maxWidth: 500,
     lineHeight: 1.6,
     textAlign: "left",
+    [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(0,2),
+    },
 }));
 
 export const ImageWrapper = styled(Box)(({ theme }) => ({
