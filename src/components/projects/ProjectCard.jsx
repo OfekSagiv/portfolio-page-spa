@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography, Stack, Box} from "@mui/material";
+import {Typography} from "@mui/material";
 import PrimaryButton from "../shared/button/PrimaryButton.jsx";
 import {PROJECT_BUTTON_LABELS} from "../../constants/projects.js";
 import {ProjectCardContainer , ProjectButtonRow} from "./Projects.styles.js";
@@ -8,10 +8,9 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
 
     return (
         <ProjectCardContainer>
-            <Typography align={"center"} variant="h4" sx={{mb: 3}}>{title}</Typography>
-            <Typography variant="body1" sx={{mb: 3}}>{description}</Typography>
 
-            <Stack direction="column" spacing={4}>
+            <Typography align={"center"} variant="h4" sx={{mb: 3}}>{title}</Typography>
+            <Typography variant="body1" sx={{ pl:3, pr:2,mb: 3}}>{description}</Typography>
 
                 <ProjectButtonRow>
                     <Typography variant="h6" sx={{mb: 1, whiteSpace: "nowrap"}}>
@@ -19,7 +18,7 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
                     </Typography>
 
                     <PrimaryButton href={demoLink} target="_blank" endIcon={demoIcon} >
-                        {PROJECT_BUTTON_LABELS.SWAGGER}
+                        {PROJECT_BUTTON_LABELS.LIVE}
                     </PrimaryButton>
                 </ProjectButtonRow>
 
@@ -33,7 +32,6 @@ const ProjectCard = ({title, description, demoText, demoLink, codeText, codeLink
                     </PrimaryButton >
                 </ProjectButtonRow>
 
-            </Stack>
         </ProjectCardContainer>
     );
 };

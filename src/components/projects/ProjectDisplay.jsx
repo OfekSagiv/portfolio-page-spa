@@ -1,34 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import ProjectCard from "./ProjectCard";
-import {StyledProjectImage} from "./Projects.styles";
 import {PROJECTS} from "../../constants/projects.js";
 import {ICONS} from "../shared/icons/icons.jsx";
-import {ImageWrapper} from "../about/About.styles.js";
-import Divider from "@mui/material/Divider";
+import ProjectsTabs from "./ProjectsTabs.jsx";
+import {ProjectInnerWrapper} from "./Projects.styles.js";
 
 const ProjectDisplay = () => {
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const project = PROJECTS[selectedIndex];
 
     return (
-        <>
-            {PROJECTS.map((project, index) => (
-                <React.Fragment key={index}>
-                    <ProjectCard
-                        title={project.title}
-                        description={project.description}
-                        demoText={project.demoText}
-                        demoLink={project.demoLink}
-                        demoIcon={ICONS[project.demoIcon]}
-                        codeText={project.codeText}
-                        codeLink={project.codeLink}
-                        codeIcon={ICONS[project.codeIcon]}
-                    />
-                    <ImageWrapper>
-                        <StyledProjectImage src={project.image} alt={`Project ${index + 1} thumbnail`} />
-                    </ImageWrapper>
-                    {index < PROJECTS.length - 1 && <Divider/>}
-                </React.Fragment>
-            ))}
-        </>
+        <ProjectInnerWrapper>
+            <ProjectsTabs selectedIndex={selectedIndex} onChange={setSelectedIndex} />
+
+            <ProjectCard
+                title={project.title}
+                description={project.description}
+                demoText={project.demoText}
+                demoLink={project.demoLink}
+                demoIcon={ICONS[project.demoIcon]}
+                codeText={project.codeText}
+                codeLink={project.codeLink}
+                codeIcon={ICONS[project.codeIcon]}
+            />
+        </ProjectInnerWrapper>
     );
 };
 

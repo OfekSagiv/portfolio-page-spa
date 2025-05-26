@@ -30,6 +30,11 @@ export const CardContainer = styled(Box)(({ theme }) => ({
     flexDirection: "row",
     borderRadius: 12,
     overflow: "hidden",
+    [theme.breakpoints.up("md")]: {
+        width: "1000px",
+        height: "600px",
+    },
+
 
     [theme.breakpoints.down("md")]: {
         boxSizing: 'border-box',

@@ -18,6 +18,7 @@ export const tools = [
     { name: "Postman", value: 70 },
     { name: "Swagger", value: 70 },
     { name: "RESTful API", value: 70 },
+    { name: "AWS", value: 70 },
 ];
 
 export const skillSections = [
