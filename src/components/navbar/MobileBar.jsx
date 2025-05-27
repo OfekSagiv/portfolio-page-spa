@@ -1,5 +1,5 @@
 import React from "react";
-import {IconButton, Menu, MenuItem, Tooltip} from "@mui/material";
+import {IconButton, Menu, Tooltip} from "@mui/material";
 import { Brightness4, Brightness7, Menu as MenuIcon } from "@mui/icons-material";
 import { SECTION_TABS } from "../../constants/section.js";
 import { THEME } from "../../constants/theme.js";
@@ -15,15 +15,10 @@ const MobileBar = ({selected, handleClick, toggleTheme, mode, anchorEl, handleMe
             </IconButton>
 
             <Menu anchorEl={anchorEl} open={open} onClose={handleMenuClose}>
-                {SECTION_TABS.map((tab) => (
-                    <MobileMenuItem
-                        key={tab}
-                        selected={selected === tab}
-                        onClick={() => handleClick(tab)}
-                    >
-                        {tab}
-                    </MobileMenuItem>
-                ))}
+                {Array.isArray(SECTION_TABS) ? SECTION_TABS.map((tab) => (
+                        <MobileMenuItem key={tab} selected={selected === tab} onClick={() => handleClick(tab)}>
+                            {tab}
+                        </MobileMenuItem>)) : null}
             </Menu>
 
             <Tooltip title="Toggle theme">

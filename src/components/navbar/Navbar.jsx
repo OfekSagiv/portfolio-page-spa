@@ -21,18 +21,11 @@ const Navbar = ({onSelect, selected, mode, toggleTheme}) => {
         <NavbarContainer position="fixed" color="default" elevation={1}>
             <CustomToolbar>
                 {isMobile ? (
-                    <MobileBar selected={selected} handleClick={handleClick} toggleTheme={toggleTheme} mode={mode}
-                               anchorEl={anchorEl}
-                               handleMenuOpen={handleMenuOpen}
-                               handleMenuClose={handleMenuClose}/>
-                ) : (
-                    <DesktopBar
-                        selected={selected}
-                        onSelect={onSelect}
-                        toggleTheme={toggleTheme}
-                        mode={mode}
-                    />
-                )}
+                        <MobileBar selected={selected} handleClick={handleClick} toggleTheme={toggleTheme} mode={mode}
+                                   anchorEl={anchorEl}
+                                   handleMenuOpen={handleMenuOpen}
+                                   handleMenuClose={handleMenuClose}/>)
+                    : (<DesktopBar selected={selected} onSelect={onSelect} toggleTheme={toggleTheme} mode={mode}/>)}
             </CustomToolbar>
         </NavbarContainer>
     );

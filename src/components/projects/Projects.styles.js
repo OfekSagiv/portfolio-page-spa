@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
-import {Tabs} from "@mui/material";
+import {Tabs, tabsClasses} from "@mui/material";
 
 export const ProjectCardContainer = styled(Box)(({ theme }) => ({
     flex: 1,
@@ -66,8 +66,24 @@ export const StyledTab = styled(Tab)(({ theme }) => ({
 
 export const StyledTabs = styled(Tabs)(({ theme }) => ({
     "& .MuiTabs-indicator": {
-        backgroundColor: theme.palette.mode === "dark"
-            ? "#fff"
-            : theme.palette.primary.main,
+        backgroundColor:
+            theme.palette.mode === "dark"
+                ? "#fff"
+                : theme.palette.primary.main,
+    },
+
+    [theme.breakpoints.down("md")]: {
+        [`& .${tabsClasses.scrollButtons}`]: {
+            color: theme.palette.text.primary,
+            '&.Mui-disabled': {
+                opacity: 0.3,
+            },
+        },
+    },
+
+    [theme.breakpoints.up("md")]: {
+        [`& .${tabsClasses.scrollButtons}`]: {
+            display: "none",
+        },
     },
 }));
