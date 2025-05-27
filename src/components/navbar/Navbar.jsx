@@ -1,32 +1,38 @@
-import React from "react";
-import {NavbarContainer, CustomToolbar, NavLinksWrapper, NavBarButton} from "./Navbar.styles";
-
-import useNavbarLogic from "./useNavbarLogic.js";
-import {SECTION_TABS} from "../../constants/section.js";
-import {IconButton, Tooltip} from "@mui/material";
-import {Brightness4, Brightness7} from "@mui/icons-material";
-import {THEME} from "../../constants/theme.js";
-import {CLASSNAMES} from "../../constants/classNames.js";
+import React, {useState} from "react";
+import {NavbarContainer, CustomToolbar} from "./Navbar.styles";
+import {useMediaQuery, useTheme,} from "@mui/material";
+import DesktopBar from "./DesktopBar.jsx";
+import MobileBar from "./MobileBar.jsx";
 
 const Navbar = ({onSelect, selected, mode, toggleTheme}) => {
-    const {navLinksRef, handleSelect} = useNavbarLogic(onSelect);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleMenuOpen = (e) => setAnchorEl(e.currentTarget);
+    const handleMenuClose = () => setAnchorEl(null);
+    const handleClick = (tab) => {
+        onSelect(tab);
+        handleMenuClose();
+    };
+
 
     return (
         <NavbarContainer position="fixed" color="default" elevation={1}>
             <CustomToolbar>
-                <NavLinksWrapper ref={navLinksRef}>
-                    {SECTION_TABS.map((tab) =>
-                        (<NavBarButton key={tab} onClick={() => handleSelect(tab)}
-                                      className={selected === tab ? CLASSNAMES.ACTIVE : ""}>
-                            {tab}
-                        </NavBarButton>))
-                    }
-                    <Tooltip title="Toggle theme">
-                        <IconButton onClick={toggleTheme} color="inherit">
-                            {mode === THEME.DARK ? <Brightness7/> : <Brightness4/>}
-                        </IconButton>
-                    </Tooltip>
-                </NavLinksWrapper>
+                {isMobile ? (
+                    <MobileBar selected={selected} handleClick={handleClick} toggleTheme={toggleTheme} mode={mode}
+                               anchorEl={anchorEl}
+                               handleMenuOpen={handleMenuOpen}
+                               handleMenuClose={handleMenuClose}/>
+                ) : (
+                    <DesktopBar
+                        selected={selected}
+                        onSelect={onSelect}
+                        toggleTheme={toggleTheme}
+                        mode={mode}
+                    />
+                )}
             </CustomToolbar>
         </NavbarContainer>
     );

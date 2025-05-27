@@ -2,6 +2,7 @@ export const frontend = [
     { name: "HTML/CSS", value: 90 },
     { name: "JavaScript", value: 80 },
     { name: "React", value: 85 },
+    { name: "Material UI", value: 80 },
 ];
 
 export const backend = [

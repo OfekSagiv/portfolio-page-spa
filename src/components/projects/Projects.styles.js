@@ -44,11 +44,23 @@ export const ProjectInnerWrapper = styled(Box)(({ theme }) => ({
 export const StyledTab = styled(Tab)(({ theme }) => ({
     textTransform: "none",
     fontSize: "1rem",
-    fontWeight: 800,
     color: theme.palette.text.primary,
-
     "&.Mui-selected": {
         color: theme.palette.text.primary,
+    },
+    [theme.breakpoints.up("md")]: {
+        textTransform: "capitalize",
+        fontSize: "1.5rem",
+        color: "inherit",
+        minWidth: "auto",
+        margin: theme.spacing(0, 4),
+        padding: 0,
+        whiteSpace: "nowrap",
+        borderBottom: "2px solid transparent",
+        transition: "border-bottom 0.2s ease",
+        "&.Mui-selected": {
+            borderBottom: `2px solid ${theme.palette.text.primary}`,
+        },
     },
 }));
 
