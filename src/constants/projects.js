@@ -15,7 +15,8 @@ export const PROJECTS = [
     {
         title: "Portfolio Website",
         description:
-            "This project is a modern SPA portfolio website built with React, Vite, and MUI, featuring clean modular code, responsive design, and a production-ready architecture.",
+            "The website you’re currently browsing is the project itself.\n" +
+            "It’s a modern portfolio built as a single-page application using React, Vite, and MUI — combining clean modular structure, responsive design, and a production-ready architecture.",
         demoText: "You're here! Check it out",
         demoLink: "https://ofeksagiv.com",
         codeText: "View the source code on GitHub",
