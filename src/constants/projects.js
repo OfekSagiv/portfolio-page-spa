@@ -34,7 +34,7 @@ export const PROJECTS = [
         demoText: "Still in progress – stay tuned!",
         demoLink: "https://ofeksagiv.com",
         codeText: "View the source code on GitHub",
-        codeLink: "https://github.com/orgs/colman-dev-project/repositories",
+        codeLink: "https://github.com/orgs/locker-it/repositories",
         image: "/project2-photo.png",
         demoIcon: "external",
         codeIcon: "github",
