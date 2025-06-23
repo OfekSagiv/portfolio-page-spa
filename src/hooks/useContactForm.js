@@ -1,6 +1,6 @@
 import { useRef,useState } from "react";
 import emailjs from "@emailjs/browser";
-import {ERROR_MESSAGES, MESSAGES} from "../constants/messages";
+import {ERROR_MESSAGES, FORM_FIELDS, MESSAGES} from "../constants/messages";
 
 export const useContactForm = () => {
     const formRef = useRef(null);
@@ -12,7 +12,7 @@ export const useContactForm = () => {
         e.preventDefault();
                const form = formRef.current;
 
-                    if (form["bot-field"].value) {
+                    if (form[FORM_FIELDS.BOT_FIELD].value) {
                         setErrorMessage(ERROR_MESSAGES.BOT_FIELD);
                         return;
                    }

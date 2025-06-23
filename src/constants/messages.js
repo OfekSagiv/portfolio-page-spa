@@ -14,3 +14,6 @@ export const SECTION_TITLES = {
     CONTACT: "Reach me directly",
 };
 
+export const FORM_FIELDS = {
+    BOT_FIELD: "bot-field",
+};
