@@ -4,7 +4,9 @@ export const MESSAGES = {
 
 export const ERROR_MESSAGES = {
     ERROR: "Something went wrong. Please try again.",
-    FAILED_TO_SEND:"Failed to send:"
+    FAILED_TO_SEND:"Failed to send:",
+    BOT_FIELD: "Submission blocked due to suspicious activity.",
+    CAPTCHA_MISSING: "Please verify that you are not a robot (reCAPTCHA).",
 }
 
 

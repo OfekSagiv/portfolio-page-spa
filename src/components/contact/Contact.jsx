@@ -6,12 +6,13 @@ import ContactDetails from "./ContactDetails.jsx";
 import ResponsiveDivider from "../shared/divider/ResponsiveDivider.jsx";
 
 const Contact = () => {
-    const {formRef, handleSubmit} = useContactForm();
+    const {formRef, handleSubmit, setCaptchaToken, errorMessage} = useContactForm();
 
     return (
         <>
             <Box sx={{flex: 1}}>
-                <ContactForm formRef={formRef} handleSubmit={handleSubmit}/>
+                <ContactForm formRef={formRef} handleSubmit={handleSubmit} setCaptchaToken={setCaptchaToken}
+                             errorMessage={errorMessage}/>
             </Box>
             <ResponsiveDivider/>
             <Box sx={{flex: 1}}>
